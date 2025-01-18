@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 180px;
+      padding: 10px;
+    }
+
+    .position-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .position-btn {
+      padding: 12px 8px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: white;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      font-size: 11px;
+    }
+
+    .position-btn.active {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #4CAF50;
+    }
+
+    .position-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .position-btn.active:hover {
+      background-color: #45a049;
+    }
+
+    .display-options {
+      margin-top: 15px;
+    }
+
+    .option-item {
+      margin: 8px 0 0 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="position-grid">
+    <button class="position-btn" data-position="top-left" aria-label="Move display to top left">
+      Top Left
+    </button>
+    <button class="position-btn" data-position="top-right" aria-label="Move display to top right">
+      Top Right
+    </button>
+    <button class="position-btn" data-position="bottom-left">Bottom Left</button>
+    <button class="position-btn" data-position="bottom-right">Bottom Right</button>
+  </div>
+  <div class="display-options">
+    <div class="option-item">
+      <input type="checkbox" id="show-access-time" checked aria-label="Toggle access time display">
+      <label for="show-access-time">Show Access Time</label>
+    </div>
+    <div class="option-item">
+      <input type="checkbox" id="show-load-time" checked>
+      <label for="show-load-time">Show Load Time</label>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
